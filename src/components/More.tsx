@@ -40,7 +40,7 @@ export default function MoreThanApp() {
           {
             icon: <FaRobot className="h-8 w-8 text-white" />,
             title: "Built-in AI to Do the Heavy Lifting",
-            desc: `Nexr isn't just a portfolio—it's your project assistant. It auto-generates roadmaps, summarizes tasks, and gives updates as you build.`,
+            desc: `Our in-bult AI doesn't just assist when asked, it's your project assistant. It auto-generates roadmaps, summarizes tasks, and gives updates as you build.`,
           },
           {
             icon: <FaRocket className="h-8 w-8 text-white" />,
