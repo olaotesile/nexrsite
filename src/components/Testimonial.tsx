@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -80,9 +81,11 @@ export default function Testimonials() {
                 current === index ? "border-white" : "border-white/40"
               } transition-all duration-300`}
             >
-              <img
+              <Image
                 src={t.image || "/placeholder.jpg"} // fallback placeholder image if no avatar
                 alt={t.name} 
+                width={1000}
+                height={1000}
                 className="object-cover h-full w-full"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement; // Typecast to HTMLImageElement
