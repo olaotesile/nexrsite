@@ -25,13 +25,13 @@ export default function Header() {
           Home
         </a>
         <a href="#" className="hover:underline">
-          Projects
+          Why us
         </a>
         <a href="#" className="hover:underline">
           About
         </a>
         <a href="#" className="hover:underline">
-          Contact
+          Register
         </a>
       </nav>
 
