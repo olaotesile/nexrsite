@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -26,7 +27,15 @@ export default function Register() {
 
       <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 items-center">
         {/* Left Side - Announcement */}
-        <div className="text-center sm:text-left">
+        <motion.div
+          className="text-center sm:text-left"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          initial={{ opacity: 0, y: -30 }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-4xl sm:text-6xl font-bold leading-tight text-white">
             We're going live soon
           </h2>
@@ -34,16 +43,28 @@ export default function Register() {
             Be the first to join Nexr and experience a new way to build,
             showcase, and connect.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right Side - Register Form */}
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10 shadow-lg">
+        <motion.div
+          className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10 shadow-lg"
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.8 }}
+        >
           <h3 className="text-2xl font-semibold mb-6 text-white">
             Register Your Interest
           </h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Full Name */}
-            <div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.5 }}
+            >
               <label htmlFor="full-name" className="sr-only">
                 Full Name
               </label>
@@ -58,10 +79,14 @@ export default function Register() {
                   validateForm();
                 }}
               />
-            </div>
+            </motion.div>
 
             {/* Email */}
-            <div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.5 }}
+            >
               <label htmlFor="email" className="sr-only">
                 Email Address
               </label>
@@ -76,10 +101,14 @@ export default function Register() {
                   validateForm();
                 }}
               />
-            </div>
+            </motion.div>
 
             {/* Why you're excited about Nexr */}
-            <div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.5 }}
+            >
               <label htmlFor="message" className="sr-only">
                 Why you're excited about Nexr
               </label>
@@ -91,10 +120,10 @@ export default function Register() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-            </div>
+            </motion.div>
 
             {/* Submit Button */}
-            <button
+            <motion.button
               type="submit"
               className={`w-full bg-white text-black font-semibold py-3 rounded-xl transition duration-300 ${
                 isFormValid
@@ -102,11 +131,14 @@ export default function Register() {
                   : "opacity-50 cursor-not-allowed"
               }`}
               disabled={!isFormValid}
+              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.6 }}
             >
               Register
-            </button>
+            </motion.button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
