@@ -81,9 +81,13 @@ export default function Testimonials() {
               } transition-all duration-300`}
             >
               <img
-                src={t.image}
+                src={t.image || "/placeholder.jpg"} // fallback placeholder image if no avatar
                 alt={t.name}
                 className="object-cover h-full w-full"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement; // Typecast to HTMLImageElement
+                  target.setAttribute("src", "/placeholder.jpg");
+                }} // handle missing images
               />
             </button>
           ))}

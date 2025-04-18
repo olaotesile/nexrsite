@@ -1,8 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 export default function Register() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  const validateForm = () => {
+    setIsFormValid(name !== "" && email !== "" && /\S+@\S+\.\S+/.test(email));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here (e.g., send data to server)
+    console.log({ name, email, message });
+  };
+
   return (
     <section
       className="relative bg-cover bg-center py-16 px-4 sm:py-20"
@@ -27,25 +42,63 @@ export default function Register() {
           <h3 className="text-2xl font-semibold mb-6 text-white">
             Register Your Interest
           </h3>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/40"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/40"
-            />
-            <textarea
-              placeholder="Why you're excited about Nexr (optional)"
-              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/40 resize-none"
-              rows={3}
-            />
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Full Name */}
+            <div>
+              <label htmlFor="full-name" className="sr-only">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="full-name"
+                placeholder="Full Name"
+                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/40"
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                  validateForm();
+                }}
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label htmlFor="email" className="sr-only">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/40"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  validateForm();
+                }}
+              />
+            </div>
+
+            {/* Why you're excited about Nexr */}
+            <div>
+              <label htmlFor="message" className="sr-only">
+                Why you're excited about Nexr
+              </label>
+              <textarea
+                id="message"
+                placeholder="Why you're excited about Nexr (optional)"
+                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/40 resize-none"
+                rows={3}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-white/90 transition duration-300"
+              className={`w-full bg-white text-black font-semibold py-3 rounded-xl transition duration-300 ${isFormValid ? "hover:bg-white/90" : "opacity-50 cursor-not-allowed"}`}
+              disabled={!isFormValid}
             >
               Register
             </button>

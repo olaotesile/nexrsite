@@ -18,9 +18,10 @@ export default function MoreThanApp() {
           We're More Than Just an App
         </h2>
         <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
-          At Nexr, we've discovered a problem and built a solution. This isn’t
-          just a platform—it’s a shift in how creators collaborate, showcase,
-          and grow. It's where real work speaks louder than polished profiles.
+          At Nexr, we've discovered a problem and built a solution. This
+          isn&apos;t just a platform—it&apos;s a shift in how creators
+          collaborate, showcase, and grow. It&apos;s where real work speaks
+          louder than polished profiles.
         </p>
       </div>
 
@@ -34,22 +35,22 @@ export default function MoreThanApp() {
           {
             icon: <FaUsers className="h-8 w-8 text-white" />,
             title: "Know Who Did What (Exactly)",
-            desc: "Nexr shows each team member’s specific roles, contributions, and skills in a project. No more guessing who actually did the work.",
+            desc: "Nexr shows each team member&apos;s specific roles, contributions, and skills in a project. No more guessing who actually did the work.",
           },
           {
             icon: <FaRobot className="h-8 w-8 text-white" />,
             title: "Built-in AI to Do the Heavy Lifting",
-            desc: "Nexr isn’t just a portfolio—it's your project assistant. It auto-generates roadmaps, summarizes tasks, and gives updates as you build.",
+            desc: "Nexr isn&apos;t just a portfolio—it's your project assistant. It auto-generates roadmaps, summarizes tasks, and gives updates as you build.",
           },
           {
             icon: <FaRocket className="h-8 w-8 text-white" />,
             title: "One Home for All Your Creative Work",
-            desc: "It combines GitHub’s collaboration, LinkedIn’s profile system, and Notion’s project management—but made for all creators.",
+            desc: "It combines GitHub&apos;s collaboration, LinkedIn&apos;s profile system, and Notion&apos;s project management—but made for all creators.",
           },
           {
             icon: <FaBriefcase className="h-8 w-8 text-white" />,
             title: "Your Projects = Your Resume (Automatically)",
-            desc: "Every project you join auto-updates your profile. Employers see what you’ve done, not just what you claim.",
+            desc: "Every project you join auto-updates your profile. Employers see what you&apos;ve done, not just what you claim.",
           },
           {
             icon: <FaRocket className="h-8 w-8 text-white" />,
