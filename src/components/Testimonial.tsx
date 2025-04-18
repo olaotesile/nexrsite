@@ -82,7 +82,7 @@ export default function Testimonials() {
             >
               <img
                 src={t.image || "/placeholder.jpg"} // fallback placeholder image if no avatar
-                alt={t.name}
+                alt={t.name} 
                 className="object-cover h-full w-full"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement; // Typecast to HTMLImageElement
