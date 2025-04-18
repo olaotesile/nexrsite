@@ -14,7 +14,6 @@ export default function Register() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send data to server)
     console.log({ name, email, message });
   };
 
@@ -29,7 +28,7 @@ export default function Register() {
         {/* Left Side - Announcement */}
         <div className="text-center sm:text-left">
           <h2 className="text-4xl sm:text-6xl font-bold leading-tight text-white">
-            We&apos;re going live soon
+            We're going live soon
           </h2>
           <p className="mt-4 text-md text-white/80">
             Be the first to join Nexr and experience a new way to build,
@@ -82,7 +81,7 @@ export default function Register() {
             {/* Why you're excited about Nexr */}
             <div>
               <label htmlFor="message" className="sr-only">
-                Why you&apos;re excited about Nexr
+                Why you're excited about Nexr
               </label>
               <textarea
                 id="message"
@@ -97,7 +96,11 @@ export default function Register() {
             {/* Submit Button */}
             <button
               type="submit"
-              className={`w-full bg-white text-black font-semibold py-3 rounded-xl transition duration-300 ${isFormValid ? "hover:bg-white/90" : "opacity-50 cursor-not-allowed"}`}
+              className={`w-full bg-white text-black font-semibold py-3 rounded-xl transition duration-300 ${
+                isFormValid
+                  ? "hover:bg-white/90"
+                  : "opacity-50 cursor-not-allowed"
+              }`}
               disabled={!isFormValid}
             >
               Register

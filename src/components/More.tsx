@@ -1,16 +1,16 @@
 "use client";
 
 import React from "react";
-import { FaBriefcase, FaUsers, FaRobot, FaRocket } from "react-icons/fa"; // Import icons from react-icons
+import { FaBriefcase, FaUsers, FaRobot, FaRocket } from "react-icons/fa";
 
 export default function MoreThanApp() {
   return (
     <section
       className="py-20 px-6 text-white"
       style={{
-        backgroundImage: "url('/Main3.png')", // Background image from the public folder
-        backgroundSize: "cover", // Cover the entire section
-        backgroundPosition: "center", // Center the background image
+        backgroundImage: "url('/Main3.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="max-w-6xl mx-auto text-center mb-16">
@@ -35,35 +35,35 @@ export default function MoreThanApp() {
           {
             icon: <FaUsers className="h-8 w-8 text-white" />,
             title: "Know Who Did What (Exactly)",
-            desc: `Nexr shows each team member\'s specific roles, contributions, and skills in a project. No more guessing who actually did the work.`,
+            desc: `Nexr shows each team member's specific roles, contributions, and skills in a project. No more guessing who actually did the work.`,
           },
           {
             icon: <FaRobot className="h-8 w-8 text-white" />,
             title: "Built-in AI to Do the Heavy Lifting",
-            desc: `Nexr isn\'t just a portfolio—it\'s your project assistant. It auto-generates roadmaps, summarizes tasks, and gives updates as you build.`,
+            desc: `Nexr isn't just a portfolio—it's your project assistant. It auto-generates roadmaps, summarizes tasks, and gives updates as you build.`,
           },
           {
             icon: <FaRocket className="h-8 w-8 text-white" />,
             title: "One Home for All Your Creative Work",
-            desc: "It combines GitHub\'s collaboration, LinkedIn's profile system, and Notion\'s project management—but made for all creators.",
+            desc: `It combines GitHub's collaboration, LinkedIn's profile system, and Notion's project management—but made for all creators.`,
           },
           {
             icon: <FaBriefcase className="h-8 w-8 text-white" />,
             title: "Your Projects = Your Resume (Automatically)",
-            desc: "Every project you join auto-updates your profile. Employers see what you\'ve done, not just what you claim.",
+            desc: `Every project you join auto-updates your profile. Employers see what you've done, not just what you claim.`,
           },
           {
             icon: <FaRocket className="h-8 w-8 text-white" />,
             title: "No Noise, Just Innovation",
-            desc: "No likes, no follows, no clout-chasing. Nexr is signal over noise—built for people who create, not just curate.",
+            desc: `No likes, no follows, no clout-chasing. Nexr is signal over noise—built for people who create, not just curate.`,
           },
         ].map((item, index) => (
           <div
             key={index}
-            style={{ backgroundColor: "#0d1a30" }} // Background color for each card
+            style={{ backgroundColor: "#0d1a30" }}
             className="border border-white/10 rounded-2xl p-6 shadow-md text-white"
           >
-            <div className="mb-4">{item.icon}</div> {/* Updated icon here */}
+            <div className="mb-4">{item.icon}</div>
             <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
             <p className="text-white/80">{item.desc}</p>
           </div>
