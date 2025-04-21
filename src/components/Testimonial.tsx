@@ -10,21 +10,21 @@ const testimonials = [
     role: "Software Engineer, Euretix",
     quote:
       "Nexr made it easy to showcase my real skills. It’s like GitHub and LinkedIn finally got it right.",
-    image: "/person1.jpg",
+    image: " npm ",
   },
   {
     name: "Victor F",
     role: "Founder, Chainroll ",
     quote:
       "Hiring through Nexr saved us tons of time and money. Seeing real and verified contributions meant no guesswork.",
-    image: "/person2.jpg",
+    image: " ",
   },
   {
     name: "Inioluwa F.",
     role: "UI/UX Designer at Nvidia",
     quote:
       "I have social anxiety and used to struggle showing what I could do — now my projects speak for themselves.",
-    image: "/person3.jpg",
+    image: " ",
   },
 ];
 
